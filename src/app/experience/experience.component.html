@@ -1,0 +1,9 @@
+<section id="timeline">
+    <h2>Work Experience Timeline</h2>
+    <div *ngFor="let job of jobs">
+      <button (click)="toggleJobDetails(job)">{{ job.title }} ({{ job.dates }})</button>
+      <p *ngIf="job.showDetails">{{ job.description }}</p>
+    </div>
+      
+  </section>
+  

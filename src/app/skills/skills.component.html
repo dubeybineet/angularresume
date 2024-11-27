@@ -1,0 +1,10 @@
+<section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li *ngFor="let skill of skills" (mouseover)="setHoveredSkill(skill)" (mouseleave)="clearHoveredSkill()">
+        {{ skill.name }}
+        <span *ngIf="hoveredSkill === skill">(Proficiency: {{ skill.rating }}/5)</span>
+      </li>
+    </ul>
+  </section>
+  
